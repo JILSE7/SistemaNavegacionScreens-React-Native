@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import StackNavigator from './src/Navigator/StackNavigator';
 import { DrawerMenu } from './src/Navigator/DrawerMenu';
 import { DrawerMenuCustom } from './src/Navigator/DrawerMenuCustom';
+import AuthContextProvider from './src/Context/AuthContext';
 
 const App = () => {
   return (
@@ -11,12 +12,27 @@ const App = () => {
     /* <DrawerMenu/> */
 
     <NavigationContainer>
-        <DrawerMenuCustom/>
+        <AppState>
+          <DrawerMenuCustom/>   
+        </AppState>
     </NavigationContainer>
         
 
   )
 }
+
+
+
+
+
+const AppState = ({children} : any) => {
+  return (
+    <AuthContextProvider>
+        {children}
+    </AuthContextProvider>
+  )
+}
+
 
 
 const styles = StyleSheet.create({

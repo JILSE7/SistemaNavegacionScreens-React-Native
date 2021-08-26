@@ -25,7 +25,7 @@ const Pagina1Screen = (props:Props) => {
 
     
     return (
-        <View style={AppStyle.globalMargin}>
+        <View style={AppStyle.globalMargin}>    
             <View style={AppStyle.button}>
             <Button  title="ir pagina 2" onPress={() =>props.navigation.navigate('Pagina2Screen') }/>
             </View>

@@ -25,6 +25,9 @@ export const AppStyle = StyleSheet.create({
         color:'white',
         fontStyle:'italic'
     },
+    textPrincipal: {
+        fontSize: 24
+    },
     avatar: {
         alignItems:'center',
         marginTop:5
@@ -43,15 +46,12 @@ export const AppStyle = StyleSheet.create({
     },
     btn: {
         width:90,
-        
         flexDirection: 'row',
         justifyContent: 'space-between'
     },
     textBtn:{
         color:'black',
         fontSize:22,
-        
-        
     },
 
     safeArea: {
