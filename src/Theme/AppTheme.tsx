@@ -42,15 +42,16 @@ export const AppStyle = StyleSheet.create({
         justifyContent:'space-around'
     },
     btn: {
-        width:200,
+        width:90,
+        
+        flexDirection: 'row',
+        justifyContent: 'space-between'
     },
     textBtn:{
-        backgroundColor:'orange',
-        
-        borderRadius: 100,
         color:'black',
         fontSize:22,
-        textAlign:'center'
+        
+        
     },
 
     safeArea: {
@@ -68,7 +69,23 @@ export const AppStyle = StyleSheet.create({
         borderColor:'black',
         borderWidth:1,
         backgroundColor:'white'
+    },
+    marginIcons: {
+        flex: 1,
+        borderWidth: 1,
+        borderColor: 'black',
+        alignItems: 'center',
         
+    },
+    viewIcons: {
+        borderColor:'black',
+        borderWidth:1,
+        flex: 1,
+        flexDirection: 'row',
+        alignItems:'center',
+        width: '100%'
+    },
+    iconsPerson: {
         
     }
 })

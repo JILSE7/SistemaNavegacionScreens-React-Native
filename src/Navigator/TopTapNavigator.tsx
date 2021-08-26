@@ -8,6 +8,8 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colores } from '../Theme/AppTheme';
 import { Text } from 'react-native';
 
+import Icon from 'react-native-vector-icons/Ionicons';
+
 const TopTab = createMaterialTopTabNavigator();
 
 export const TopTapNavigator = () =>  {
@@ -21,8 +23,10 @@ export const TopTapNavigator = () =>  {
       
         
         screenOptions={ ({route}) => ({
-            tabBarLabelStyle: { fontSize: 12 },
+            tabBarLabelStyle: { fontSize: 12},
             tabBarPressColor: colores.primario,
+            tabBarActiveTintColor: 'green',
+            tabBarInactiveTintColor:'gray',
             tabBarStyle: { backgroundColor: 'white',     borderTopColor: 'white', elevation: 0, borderTopWidth: 0, },
             tabBarShowIcon:true,
             tabBarIndicatorStyle: {
@@ -38,18 +42,18 @@ export const TopTapNavigator = () =>  {
         
                 switch (route.name) {
                   case 'Contact':
-                    iconName = 'CO';
+                    iconName = 'chatbubble-ellipses-outline';
                     break;
         
                     case 'Album':
-                    iconName = 'AL';
+                    iconName = 'radio-outline';
                     break;
         
                     case 'Chats':
-                    iconName = 'CH';
+                    iconName = 'people-outline';
                     break;
                 }
-                return <Text style={{color}}>{iconName}</Text>
+                return <Icon color={color} name={iconName} size={20}  />
                }
 
             

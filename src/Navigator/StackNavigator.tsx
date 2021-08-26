@@ -27,17 +27,17 @@ const StackNavigator = () =>  {
         screenOptions={{
             headerShadowVisible:false, //quita el borde del header
             headerStyle:{
-                backgroundColor:'gray',
+                
             },
             contentStyle: {
-                backgroundColor:"gray"
+                backgroundColor: 'white'
             }
 
             
         }}
         
       >
-        <Stack.Screen name="Pagina1Screen"   options={{title:"          Hola"}}  component={Pagina1Screen} />
+        <Stack.Screen name="Pagina1Screen"   options={{title:"    Pagina 1"}}  component={Pagina1Screen} />
         <Stack.Screen name="Pagina2Screen" options={{title:"Hola2"}} component={Pagina2Screen} />
         <Stack.Screen name="Pagina3Screen" component={Pagina3Screen} />
         <Stack.Screen name="PersonaScreen" component={PersonaScreen}/>

@@ -7,6 +7,7 @@ import { Text, useWindowDimensions } from 'react-native';
 import { AppStyle } from '../Theme/AppTheme';
 import { Tabs } from './BottomTabNavigation';
 
+import Icon from 'react-native-vector-icons/Ionicons';
 const Drawer = createDrawerNavigator();
   //, drawerPosition:'right'} - posicion del drawer en screenoptions
 
@@ -39,10 +40,12 @@ const MenuInterno = (props: DrawerContentComponentProps ) => {
       <View style={AppStyle.MenuContainer}>
 
         <TouchableOpacity style={AppStyle.btn} onPress={() => props.navigation.navigate('Tabs')}>
-          <Text style={AppStyle.textBtn}>Tabs</Text>
+          <Icon name="newspaper-outline" size={20} color="green" />
+          <Text style={{...AppStyle.textBtn, paddingRight: 10}}>Tabs</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={AppStyle.btn} onPress={() => props.navigation.navigate('Settings')}>
+        <Icon name="skull-outline" size={20} color="green" />
           <Text style={AppStyle.textBtn}>Ajustes</Text>
         </TouchableOpacity>
       </View>

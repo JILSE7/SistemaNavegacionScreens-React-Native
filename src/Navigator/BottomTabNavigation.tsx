@@ -11,6 +11,8 @@ import { AppStyle, colores } from '../Theme/AppTheme';
 import { Platform, Text } from 'react-native';
 import { TopTapNavigator } from './TopTapNavigator';
 
+import Icon from 'react-native-vector-icons/Ionicons';
+
 
 //MOSTRANDO TABS SEGUN EL S.O
 
@@ -46,18 +48,18 @@ export const  TabIOS = () =>  {
 
         switch (route.name) {
           case 'Tab1Screen':
-            iconName = 'T1';
+            iconName = "hand-left-outline" 
             break;
 
-            case 'Tab2Screen':
-            iconName = 'T2';
+            case 'TopTap':
+            iconName = 'rocket-outline';
             break;
 
             case 'StackNavigator':
-            iconName = 'STACK';
+            iconName = 'speedometer-outline';
             break;
         }
-        return <Text style={{color}}>{iconName}</Text>
+        return <Text style={{color}}><Icon name={iconName} size={90} color="green" /></Text>
        }
        
     })
@@ -111,18 +113,18 @@ const  TabAndroid = () =>  {
   
           switch (route.name) {
             case 'Tab1Screen':
-              iconName = 'T1';
+              iconName = "hand-left-outline" 
               break;
   
-              case 'Tab2Screen':
-              iconName = 'T2';
+              case 'TopTap':
+              iconName = 'rocket-outline';
               break;
   
               case 'StackNavigator':
-              iconName = 'T3';
+              iconName = 'speedometer-outline';
               break;
           }
-          return <Text style={{color}}>{iconName}</Text>
+          return <Text style={{color}}><Icon name={iconName} size={25} color="black" /></Text>
          }
       })}
     > 
